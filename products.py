@@ -20,7 +20,7 @@ class Product:
         
         self.active = True
 
-    def get_quantity(self) -> float:
+    def get_quantity(self) -> float: #the output is defined as float, but the quantity is always an integer, I dont understand this specification
         return self.quantity
             
     def set_quantity(self, quantity):
@@ -38,7 +38,7 @@ class Product:
         self.active = False
 
     def show(self) -> str:
-        return f'{self.name}, Price:{self.price}, Quantity:{self.quantity}'
+        return f'{self.name}, Price:${self.price}, Quantity:{self.quantity}'
     
     def buy(self, quantity) -> float:
         if self.quantity - quantity < 0:

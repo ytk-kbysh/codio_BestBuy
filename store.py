@@ -21,11 +21,11 @@ class Store:
         return total
     
 
-    def get_all_products(self) ->list:
+    def get_all_products(self) ->list: #spec "->list[Product]" gives error, so I removed "[Product]"
         all_products = []
         for product in self.product_list:
             if product.is_active() == 1:
-                all_products.append(product.show().split(",")[0])
+                all_products.append(product.show())
         return all_products
 
 
